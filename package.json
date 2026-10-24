@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check web/app.js && node --check web/skeleton.js && node --check web/annotation-ui.js && node --check web/findings.js && node --check web/schematic-cut.js && node --check web/broken-bone.js && node --check web/bone-context.js && node --check web/image-guide.js && node --check web/workspace.js && node --check web/skull-intro.js",
+    "test:findings": "node --test tests/test-findings.mjs",
+    "test:schematic": "node --test tests/test-schematic-cut.mjs",
+    "test:context": "node --test tests/test-bone-context.mjs tests/test-schematic-cut.mjs tests/test-findings.mjs tests/test-image-guide.mjs"
+  },
+  "devDependencies": {
+    "three": "^0.180.0"
+  }
+}

@@ -1,0 +1,16 @@
+[project]
+name = "vitrion"
+version = "0.1.0"
+description = "Research prototype for evidence-aware fracture mapping"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.110,<0.111", "starlette>=0.36.3,<0.37", "uvicorn>=0.29", "pillow>=10", "python-multipart>=0.0.9"]
+
+[project.optional-dependencies]
+dicom = ["pydicom>=3", "numpy>=1.26"]
+test = ["pytest>=8", "httpx>=0.27"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+vitrion = ["data/*.json"]
